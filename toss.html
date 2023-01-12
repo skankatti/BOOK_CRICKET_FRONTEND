@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="toss.css">
+    <title>TOSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ <style>
+  .head{ width: 20px; height: 20px; }
+  .tail{ width: 20px; height: 20px; }
+ </style>
+</head>
+
+<script>
+const tossAPI = 'http://localhost:8080/book-cricket/toss';
+ function callToss() {
+
+ var xhReq = new XMLHttpRequest();
+ xhReq.open("GET", tossAPI, false);
+ xhReq.send(null);
+ var toss = JSON.parse(xhReq.responseText);
+ document.getElementById("toss").innerHTML = toss.tossResult;
+ console.log(toss.tossResult)
+ let btn = document.createElement("button");
+            btn.innerHTML = "PLAY";
+            btn.style.height = "9%";
+            btn.style.width = "18%";
+            btn.style.marginLeft = "600px";
+            btn.style.marginBottom = "-30px";
+            btn.style.position = "absolute";
+            btn.style.border = "none";
+            btn.style.borderRadius="32px";
+           document.body.appendChild(btn);
+           btn.onclick = function() { document.location='playarea.html' }
+ }
+
+</script>
+
+<body>
+    <!-- <form action="/action_page.php">
+      <h1>What's your choice?</h1>
+    <input type="radio" class="head" name="fav_language" value="HTML">
+    <label for="html">HEAD</label>
+   <input type="radio" class="tail" name="fav_language" value="CSS">
+    <label for="css">TAIL</label><br>
+  </form> -->
+</div>
+  <div class='container'>
+  <!---- <div><b>TOSS</b></div>-->
+    <img id="featureCoin" src="Toss Heads.png"/>  
+    <div id='coin'>  
+    </div>  
+
+    <!-- <button id='button' onclick="getToss()">  
+     Flip coin  
+    </button>   -->
+    <button id="button" onclick="callToss()">Flip Coin</button>
+    <div class="toss" id='toss'>  
+    </div>  
+    <div id='headsCounter'>  
+    </div>  
+    <div id='tailsCounter'>  
+    </div> </div>
+    <!-- <div class="btn2">
+      <button class="button2"onclick="document.location='playarea.html'">Play</button>
+       </div> -->
+    <script src="mainJS.js"></script>
+    <script src="./headortail.html"></script>
+</body>
+</html>
+
+
+
+

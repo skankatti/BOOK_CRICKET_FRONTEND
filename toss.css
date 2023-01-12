@@ -1,0 +1,82 @@
+
+body {  
+  
+
+  font-family: 'Ubuntu', sans-serif;  
+  background-image: url("./Backgrount\ Image\(Blur\).jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }  
+ #coin {  
+  margin-bottom:10px; 
+  margin-top: -50px;  
+ }  
+ #button {  
+  background:#64ffda;  
+  color:#111;  
+  padding:10px 20px;  
+  border-radius:2px;  
+  display:inline-block;  
+  transition:0.5s;  
+  cursor:pointer;  
+   font-size: 23px;  
+  margin-bottom: 30px;  
+  margin-top: 86px;
+  margin-left: 12px;
+  box-shadow: 1px 1px 8px #DCDCDC;  }
+  #hover {  
+   opacity:0.5;  
+  }  
+  
+ .animate-coin {  
+  animation: flip 1.4s 1;  
+ }  
+ @keyframes flip {  
+  0% {  
+   transform: scale3d(1,1,1) rotateX(0deg);  
+  }  
+  50% {  
+   transform: scale3d(2,2,2) rotateX(3600deg);  
+  }  
+  100% {  
+   transform: scale3d(1,1,1) rotateX(7200deg);  
+  }  
+ }  
+ /* Centralise content */  
+ .container {  
+  width:80%;  
+  margin:200px auto;  
+  text-align:Center;
+  margin-top: 13%;  
+ }  
+ img {  
+  max-width:100%;  
+ }  
+ #tailsCounter span, #headsCounter span {  
+  color:#6ab344;  
+ }   
+ #result {  
+  color:#6ab344;
+  margin-top: -19px;  
+ } 
+ 
+ .h1{
+      font-size: 15px;
+ }
+ .button2{
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 32px;
+  display: inline-block;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 23px;
+  margin-bottom: 30px;
+  margin-left: 600px;
+  width: 18%; 
+ }
+ .btn2{
+ margin-top: -11%;
+ }
