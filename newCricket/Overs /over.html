@@ -65,7 +65,6 @@
             </tbody>
           </table>
         </div>
-        <!-- <form class="form-horizontal"> -->
         <div class="table-responsive3">
           <table class="table table-dark table-striped table-bordered">
             <thead>
@@ -93,7 +92,6 @@
           </table>
         </div>
         <img src="./Cricketchampion.png" class="Cricketchampion" />
-        <!-- <form class="form-horizontal"> -->
         <div class="table-responsive4">
           <table class="table table-dark table-striped table-bordered">
             <thead>
@@ -134,85 +132,9 @@
         </div>
         <button class="start" type="submit" onclick="fun()" id="submit">
           <a href="../Team/team.html">NEXT</a>
-          <!-- <a href="#">next</a> -->
         </button>
       </form>
     </div>
   </body>
-  <script>
-    // function fun(){
-    // var form=document.getElementById('form')
-    // form.addEventListener('submit', function(e){
-    //  e.preventDefault()
-
-    //  var value=document.getElementById('value').value
-    //  var value1=document.getElementById('value1').value
-    //  var over=document.getElementById('overs').value
-    //  var wicket=document.getElementById('wicket').value
-
-    //  fetch('http://localhost:8080/book-cricket/setOverswicketsTeamNames', {
-    //   method: 'POST',
-    //   body: JSON.stringify({
-    //     tovatlOver:over,
-    //     totalWickets:wicket,
-    //     teamOne:value,
-    //     teamTwo:value1
-
-    //   }),
-    //   headers: {
-    //     'Content-type': 'application/json; charset=UTF-8',
-    //   }
-    //   })
-    //   .then(function(response){
-    //   return response.json()})
-    //   .then(function(data)
-    //   {console.log(data)
-    // }).catch(error => console.error('Error:', error));
-    // });
-    // }
-
-    function fun() {
-      //    const tovatlOver=document.getElementById("overs").value
-      var teamOne = document.getElementById("value").value;
-      var teamTwo = document.getElementById("value1").value;
-      var tovatlOver = document.getElementById("overs").value;
-      var totalWickets = document.getElementById("wicket").value;
-      var series = document.getElementById("series").value;
-
-
-      //     fetch("http://localhost:8080/book-cricket/setOverswicketsTeamNames", {
-      //   method: "POST",
-      //   body: JSON.stringify({
-      //     // tovatlOver:document.getElementById("overs"),
-      //     totalWickets:document.getElementById("wicket"),
-      //     teamOne:document.getElementById("value"),
-      //     teamTwo:document.getElementById("value1")
-      //   }),
-      //   headers: {
-      //     "Content-type": "application/json; charset=UTF-8"
-      //   }
-      // })
-      //   .then((response) => response.json())
-      //   .then((json) => console.log(json));
-      var url = new URL(
-        "http://localhost:8080/book-cricket/setOverswicketsTeamNames"
-      );
-
-      url.searchParams.append("tovatlOver", tovatlOver);
-      url.searchParams.append("totalWickets", totalWickets);
-      url.searchParams.append("teamOne", teamOne);
-      url.searchParams.append("teamTwo", teamTwo);
-      url.searchParams.append("series", series);
-      // url.searchParams.append("series", );
-      console.log(url);
-
-      const Senddata = (ev) => {
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", url);
-        xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-        xhr.send();
-      };
-      console.log(Senddata(url));
-    }
-  </script>
+  <script src="./overs.js"></script>
 </html>

@@ -14,20 +14,19 @@ function tableCreate () {
     table.style.marginLeft="73px";
     var tblBody = document.createElement('tbody');
   var row = table.insertRow(0);
+
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
   var cell3 = row.insertCell(2);
-  var cell4 = row.insertCell(3);
 
-  cell1.innerHTML = "bowlerName";
-  cell2.innerHTML = "playerRuns";
-  cell3.innerHTML = "ballPlayed";
-  cell4.innerHTML = "playerName";
+  cell1.innerHTML = "PLAYERRUNS";
+  cell2.innerHTML = "BALLPLAYED";
+  cell3.innerHTML = "PLAYERNAME";
 
     for(var i = 0; i < jsonObject.length; i++){
       var tr = document.createElement('tr');
       tblBody.appendChild(tr)
-      for(var j=1; j< Object.keys(jsonObject[i]).length-2; j++) {
+      for(var j=2; j< Object.keys(jsonObject[i]).length-2; j++) {
           var td = document.createElement('td');
           
         td.innerHTML = jsonObject[i][Object.keys(jsonObject[i])[j]];

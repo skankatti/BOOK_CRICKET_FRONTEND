@@ -10,73 +10,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Scorecard.css">
 </head>
 
-<style>
-    body,
-html {
-  max-width: 100%;
-  height: 100%;
-  font-family:'Bitstream Vera Serif Bold',
-}
-
-.bg {
-  background-image: url("./Backgrount\ Image\(Blur\)\ \(1\).jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.li2 {
-  color: white;
-  margin-left: 20px;
-  margin-top: 15px;
-}
-
-/* table{
-  font-family: Arial, serif;
-  border-collapse:collapse;
-} */
-
-.table{
-  width: 4px;
-}
-#myDynamicTable3{
-  position :absolute;
-  align-items: center;
-  margin-top: 71px;
-  margin-left: 980px;
-}
-#myDynamicTable1{
-  position :absolute;
-  align-items: center;
-  margin-top: 71px;
-  margin-left: 980px;
-}
-
-
-</style>
 <body>
     <div class="bg">
         <ul>
@@ -87,13 +23,13 @@ li a {
        
         <div class="scoreboard" id="myDynamicTable">
            <table class="table table-dark table-striped table-bordered" id="myDynamicTable1">
-
            </table>
+           <h1 class="team1">Team1 Scorecard</h1>
         </div>
         <div class="scoreboard2" id="myDynamicTable2">
           <table class="table table-dark table-striped table-bordered" id="myDynamicTable3">
-
           </table>
+          <h1>Team2 Scorecard</h1>
         </div>
 </body>
 
