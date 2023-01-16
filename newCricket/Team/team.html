@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India</title>
+  <link rel="stylesheet" href="./team.css">
+<body>
+  <div class="bg">
+    <img src="./Players Names Frame.png" alt="frame" class="team1">
+
+    <img src="./Players Names Frame.png" alt="frame" class="team2">
+
+  </div>
+
+  <div class="vs1">
+    <img src="./vs.png" alt="india" height: 125%;width: 125%;>
+  </div>
+
+  <ul>
+    <li id="playerName"></li>
+  </ul>
+  <ul class="ul1">
+    <li id="playerName1"></li>
+  </ul>
+  <div>
+    <div class="add_players">
+      <button class="india" onclick="getResponseFromAPI()">ADD PLAYERS</button>
+      <button class="australia" onclick="getResponseFromAPI2()">ADD PLAYERS</button>
+    </div>
+  </div>
+  <div class="teams">
+    <button class="button" id="teamone"><a href="../Playarea/toss.html">india</a></button>
+    <button class="button1" id="teamtwo"><a href="../Playarea/toss.html">australia</a></button>
+  </div>
+  <h1 id="msg"></h1>
+</body>
+<script>
+  const uri = 'http://localhost:8080/book-cricket/team-one';
+  const uri1 = 'http://localhost:8080/book-cricket/team-two';
+  function getResponseFromAPI() {
+    var xhReq = new XMLHttpRequest();
+    xhReq.open("GET", uri, false);
+    xhReq.send(null);
+    var jsonObject = JSON.parse(xhReq.responseText);
+    console.log(jsonObject)
+    let txt = "";
+    for (let x in jsonObject) {
+      txt += jsonObject[x] + "<br>";
+    }
+    document.getElementById("playerName").innerHTML = txt;
+  }
+  function getResponseFromAPI2() {
+    var xhReq = new XMLHttpRequest();
+    xhReq.open("GET", uri1, false);
+    xhReq.send(null);
+    var jsonObject = JSON.parse(xhReq.responseText);
+    console.log(jsonObject)
+    let txt = "";
+    for (let x in jsonObject) {
+      txt += jsonObject[x] + "<br>";
+    }
+    document.getElementById("playerName1").innerHTML = txt;
+  }
+</script>
+
+</html>

@@ -1,0 +1,413 @@
+body,
+html {
+  max-width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+.bg {
+  background-image: url("./Backgrount\ Image\(Blur\)\ \(1\).jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.btn {
+  height: 9%;
+  width: 20%;
+  margin-top: 39%;
+  margin-left: 20%;
+  text-size-adjust: 20%;
+}
+
+.start {
+  font-size: xxx-large;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #1da2b9;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  height: 9%;
+  width: 20%;
+  margin-top: 39%;
+  margin-left: 15%;
+  text-size-adjust: 20%;
+}
+
+.start:active {
+  background-color: #145c98;
+  box-shadow: 0 5px rgb(0, 0, 0);
+  transform: translateY(4px);
+}
+
+.rules {
+  font-size: xxx-large;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #c64646;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  height: 9%;
+  width: 20%;
+  margin-top: 39%;
+  margin-left: 20%;
+  text-size-adjust: 20%;
+}
+
+.rules:active {
+  background-color: #bc180d;
+  box-shadow: 0 5px rgb(0, 0, 0);
+  transform: translateY(4px);
+}
+
+.Cricketchampion {
+  display: block;
+  margin-left: 40%;
+  margin-top: 12%;
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+a{
+  text-decoration:none;
+  color:white;
+}
+
+.Batsman {
+  display: block;
+  margin-left: 83%;
+  margin-top: 20%;
+  height: 36%;
+  width: 16%;
+  position: absolute;
+}
+
+.Bowler {
+  display: block;
+  margin-left: 0%;
+  margin-top: 15%;
+  height: 50%;
+  width: 30%;
+  position: absolute;
+}
+
+.form {
+  position: absolute;
+  margin-top: -3%;
+  margin-left: 46%;
+  color: white;
+  font-size: 208%;
+  padding: 2px;
+}
+
+input.largerCheckbox {
+  width: 32px;
+  height: 32px;
+}
+
+@media (min-width: 1024px) {
+  .Cricketchampion {
+    display: block;
+    margin-left: 40%;
+    margin-top: 12%;
+    width: 100%;
+    height: auto;
+  }
+
+  .start {
+    height: 12%;
+    margin-top: 43%;
+  }
+
+  .rules {
+    height: 12%;
+  }
+
+  .Bowler {
+    margin-top: 17%;
+  }
+}
+
+@media (min-width: 992px) {
+  .Cricketchampion {
+    display: block;
+    margin-left: 35%;
+    margin-top: 12%;
+    width: 33%;
+    height: auto;
+  }
+
+  .start {
+    height: 12%;
+  }
+
+  .rules {
+    height: 12%;
+  }
+
+  .Bowler {
+    margin-top: 17%;
+  }
+}
+
+@media (min-width: 768px) {
+  .Cricketchampion {
+    display: block;
+    margin-left: 32%;
+    margin-top: 18%;
+    max-width: 100%;
+    height: 40%;
+  }
+
+  .start {
+    height: 12%;
+  }
+
+  .rules {
+    height: 12%;
+  }
+
+  .Bowler {
+    margin-top: 17%;
+  }
+}
+
+@media (min-width: 780px) {
+  .Cricketchampion {
+    display: block;
+    margin-left: 39%;
+    margin-top: 20%;
+    max-width: 100%;
+    height: 26%;
+  }
+
+  .start {
+    height: 12%;
+  }
+
+  .rules {
+    height: 12%;
+  }
+
+  .Bowler {
+    height: 39%;
+    width: 22%;
+    margin-top: 18%;
+    margin-left: 6%;
+  }
+
+  .Batsman {
+    height: 31%;
+    width: 17%;
+    margin-left: 82%;
+  }
+}
+
+@media (min-width: 754px) {
+  .Cricketchampion {
+    display: block;
+    margin-left: 39%;
+    margin-top: 20%;
+    max-width: 100%;
+    height: 26%;
+  }
+
+  .start {
+    height: 12%;
+  }
+
+  .rules {
+    height: 12%;
+  }
+
+  .Bowler {
+    height: 39%;
+    width: 22%;
+    margin-top: 18%;
+    margin-left: 6%;
+  }
+
+  .Batsman{
+    height: 31%;
+    width: 17%;
+
+    margin-left: 82%;
+  }
+}
+
+@media (min-width: 652px) {
+  .Cricketchampion {
+    display: block;
+    margin-left: 36%;
+    margin-top: 20%;
+    max-width: 100%;
+    height: 26%;
+  }
+
+  .start {
+    height: 12%;
+    width: 24%;
+  }
+
+  .rules {
+    height: 12%;
+
+    width: 24%;
+  }
+
+  .Bowler {
+    height: 39%;
+    width: 22%;
+    margin-top: 18%;
+    margin-left: 6%;
+  }
+
+  .Batsman{
+    height: 31%;
+    width: 17%;
+    margin-left: 82%;
+  }
+}
+
+@media (min-width: 622px) {
+  .Cricketchampion {
+    display: block;
+    margin-left: 36%;
+    margin-top: 20%;
+    max-width: 100%;
+    height: 26%;
+  }
+
+  .start {
+    height: 12%;
+    width: 24%;
+  }
+
+  .rules {
+    height: 12%;
+    width: 24%;
+  }
+
+  .Bowler {
+    height: 39%;
+    width: 22%;
+    margin-top: 18%;
+    margin-left: 6%;
+  }
+
+  .Batsman{
+    height: 31%;
+    width: 17%;
+    margin-left: 82%;
+  }
+}
+
+@media (min-width: 676px) {
+  .Cricketchampion {
+    display: block;
+    margin-left: 35%;
+    margin-top: 12%;
+    max-width: 100%;
+    height: 26%;
+  }
+
+  .start {
+    height: 12%;
+    width: 24%;
+  }
+
+  .rules {
+    height: 12%;
+
+    width: 24%;
+  }
+
+  .Bowler {
+    height: 39%;
+    width: 22%;
+    margin-top: 18%;
+    margin-left: 6%;
+  }
+
+  .Batsman{
+    height: 31%;
+    width: 17%;
+    margin-left: 82%;
+  }
+}
+
+@media (min-width: 610px) {
+  .Cricketchampion {
+    display: block;
+    margin-left: 35%;
+    margin-top: 12%;
+    width: 33%;
+    height: auto;
+  }
+
+  .start {
+    height: 12%;
+    width: 24%;
+  }
+
+  .rules {
+    height: 12%;
+    width: 24%;
+  }
+
+  .Bowler {
+    height: 39%;
+    width: 22%;
+    margin-top: 18%;
+    margin-left: 6%;
+  }
+
+  .Batsman{
+    height: 31%;
+    width: 17%;
+    margin-left: 82%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 574px) {
+  .Cricketchampion {
+    height: 159px;
+    margin-left: 36%;
+    margin-top: 12%;
+  }
+
+  .start {
+    height: 13%;
+    width: 33%;
+    margin-left: 11%;
+  }
+
+  .start {
+    height: 13%;
+    width: 33%;
+    margin-left: 29%;
+  }
+
+  .Batsman{
+    height: 36%;
+    width: 16%;
+    margin-left: 83%;
+  }
+
+  .Batsman{
+    height: 50%;
+    width: 30%;
+    margin-left: 0%;
+  }
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./over.css" />
+  </head>
+  <body>
+    <div class="background">
+      <form class="form-horizontal" id="form" method="post">
+        <div class="table-responsive44">
+          <table class="table table-dark table-striped table-bordered">
+              <thead>
+                  <th>TOURNAMENT</th>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>
+                          <select id="series"  class="form-select" aria-label="Default select example">
+                              <option selected value="1">1</option>
+                              <option value="3">3 </option>
+                              <option value="5">5</option>
+                            </select>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+          </div>
+        <div class="table-responsive2">
+          <table class="table table-dark table-striped table-bordered">
+            <thead>
+              <th>Select Team One</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <select
+                    id="value"
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Open to select Team</option>
+                    <option value="India">India</option>
+                    <option value="Australia">Australia</option>
+                    <option value="England">England</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="New Zealand">New Zealand</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- <form class="form-horizontal"> -->
+        <div class="table-responsive3">
+          <table class="table table-dark table-striped table-bordered">
+            <thead>
+              <th>Select Team Two</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <select
+                    id="value1"
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Open to select Team</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                    <option value="West Indies">West Indies</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                    <option value="West Indies">West Indies</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <img src="./Cricketchampion.png" class="Cricketchampion" />
+        <!-- <form class="form-horizontal"> -->
+        <div class="table-responsive4">
+          <table class="table table-dark table-striped table-bordered">
+            <thead>
+              <th>WICKETS</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    id="wicket"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter wicket"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-dark table-striped table-bordered">
+            <thead>
+              <th>OVERS</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="overs"
+                    placeholder="Enter overs"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button class="start" type="submit" onclick="fun()" id="submit">
+          <a href="../Team/team.html">NEXT</a>
+          <!-- <a href="#">next</a> -->
+        </button>
+      </form>
+    </div>
+  </body>
+  <script>
+    // function fun(){
+    // var form=document.getElementById('form')
+    // form.addEventListener('submit', function(e){
+    //  e.preventDefault()
+
+    //  var value=document.getElementById('value').value
+    //  var value1=document.getElementById('value1').value
+    //  var over=document.getElementById('overs').value
+    //  var wicket=document.getElementById('wicket').value
+
+    //  fetch('http://localhost:8080/book-cricket/setOverswicketsTeamNames', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     tovatlOver:over,
+    //     totalWickets:wicket,
+    //     teamOne:value,
+    //     teamTwo:value1
+
+    //   }),
+    //   headers: {
+    //     'Content-type': 'application/json; charset=UTF-8',
+    //   }
+    //   })
+    //   .then(function(response){
+    //   return response.json()})
+    //   .then(function(data)
+    //   {console.log(data)
+    // }).catch(error => console.error('Error:', error));
+    // });
+    // }
+
+    function fun() {
+      //    const tovatlOver=document.getElementById("overs").value
+      var teamOne = document.getElementById("value").value;
+      var teamTwo = document.getElementById("value1").value;
+      var tovatlOver = document.getElementById("overs").value;
+      var totalWickets = document.getElementById("wicket").value;
+      var series = document.getElementById("series").value;
+
+
+      //     fetch("http://localhost:8080/book-cricket/setOverswicketsTeamNames", {
+      //   method: "POST",
+      //   body: JSON.stringify({
+      //     // tovatlOver:document.getElementById("overs"),
+      //     totalWickets:document.getElementById("wicket"),
+      //     teamOne:document.getElementById("value"),
+      //     teamTwo:document.getElementById("value1")
+      //   }),
+      //   headers: {
+      //     "Content-type": "application/json; charset=UTF-8"
+      //   }
+      // })
+      //   .then((response) => response.json())
+      //   .then((json) => console.log(json));
+      var url = new URL(
+        "http://localhost:8080/book-cricket/setOverswicketsTeamNames"
+      );
+
+      url.searchParams.append("tovatlOver", tovatlOver);
+      url.searchParams.append("totalWickets", totalWickets);
+      url.searchParams.append("teamOne", teamOne);
+      url.searchParams.append("teamTwo", teamTwo);
+      url.searchParams.append("series", series);
+      // url.searchParams.append("series", );
+      console.log(url);
+
+      const Senddata = (ev) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", url);
+        xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+        xhr.send();
+      };
+      console.log(Senddata(url));
+    }
+  </script>
+</html>
