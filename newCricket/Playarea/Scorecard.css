@@ -44,7 +44,7 @@ li a {
 } */
 
 .table {
-  width: 4px;
+  width: 10px;
 }
 #myDynamicTable3 {
   position: absolute;
@@ -58,8 +58,38 @@ li a {
   margin-top: 71px;
   margin-left: 980px;
 }
-.team1{
+/* .team1{
     margin-top: 372px;
     position: absolute;
     margin-left: 115px;
+    color: white;
+    background-color: black;
+} */
+/* .team2{
+  margin-top: 372px;
+  position: absolute;
+  margin-left: 1002px;
+  color: white;
+  background-color: black;
+} */
+.new-match{
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #46a4c6;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  height: 12%;
+  width: 20%;
+  margin-top: 30%;
+  margin-left: 42%;
+  text-size-adjust: 20%;
+  font-size: xxx-large;
+}
+.new-match:active {
+  background-color: #107968;
+  box-shadow: 0 5px rgb(0, 0, 0);
+  transform: translateY(4px);
 }

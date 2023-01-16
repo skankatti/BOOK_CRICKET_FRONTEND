@@ -3,7 +3,6 @@
 const uri = 'http://localhost:8080/book-cricket/inning';
 const uri1 = 'http://localhost:8080/book-cricket/end-of-first-inning';
 const uri3 = 'http://localhost:8080/book-cricket/previous-ball';
-const newmatch1 ="http://localhost:8080/book-cricket/new-match"
 function getResponseFromprevball(){
     var xhReq = new XMLHttpRequest();
     xhReq.open("GET", uri3, false);
@@ -21,12 +20,7 @@ function getResponseFromprevball(){
     console.log(jsonObject);
 }
 
-//new-match
-function newmatch(){
-    var xhReq = new XMLHttpRequest();
-            xhReq.open("GET", newmatch1, false);
-            xhReq.send(null);
-}
+
 //Inning
 function getResponseFromAPI() {
     var xhReq = new XMLHttpRequest();
@@ -44,7 +38,8 @@ function getResponseFromAPI() {
 
     if ((jsonObject.oversCompleted==jsonObject.totalOvers) || (jsonObject.wicketCount==jsonObject.totalWicket 
     && jsonObject.inningType==1)) {
-
+       var prev = document.getElementById("prev");
+       prev.remove();
         var Target = jsonObject.totalScore + 1;
         console.log(Target);
         let btn = document.createElement("button");
@@ -68,6 +63,7 @@ function getResponseFromAPI() {
         // h1.style.position = "absolute";
         // h1.style.color = "cadetblue";
         // document.body.appendChild(h1);
+
         btn.onclick = function () {
             var xhReq = new XMLHttpRequest();
             xhReq.open("GET", uri1, false);
@@ -75,6 +71,7 @@ function getResponseFromAPI() {
             window.location.replace("secondInning.html");
         }
         document.body.appendChild(btn);
+        
     }
     //AUTOPLAY FUNCTION
 // var but = document.querySelector("[id='hit']");

@@ -13,7 +13,7 @@ function tableCreate() {
   var cell2 = row.insertCell(1);
   var cell3 = row.insertCell(2);
 
-  cell1.innerHTML = "PLAYER-RUNS";
+  cell1.innerHTML = "PLAYERRUNS";
   cell2.innerHTML = "BALLPLAYED";
   cell3.innerHTML = "PLAYERNAME";
 

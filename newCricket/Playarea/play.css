@@ -138,24 +138,3 @@ td{
   box-shadow: 0 5px rgb(0, 0, 0);
   transform: translateY(4px);
 }
-.new-match{
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #46a4c6;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-  height: 12%;
-  width: 10%;
-  margin-top: -20%;
-  margin-left: 90%;
-  text-size-adjust: 20%;
-  font-size: xxx-large;
-}
-.new-match:active {
-  background-color: #107968;
-  box-shadow: 0 5px rgb(0, 0, 0);
-  transform: translateY(4px);
-}

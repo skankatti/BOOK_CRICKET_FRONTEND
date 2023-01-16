@@ -24,15 +24,28 @@
         <div class="scoreboard" id="myDynamicTable">
            <table class="table table-dark table-striped table-bordered" id="myDynamicTable1">
            </table>
-           <h1 class="team1">Team1 Scorecard</h1>
         </div>
         <div class="scoreboard2" id="myDynamicTable2">
           <table class="table table-dark table-striped table-bordered" id="myDynamicTable3">
           </table>
-          <h1>Team2 Scorecard</h1>
         </div>
-</body>
+        <button  class="new-match" id="newmatch" onclick="newmatch()">Play Again</button>
+    
 
+</body>
+<script>
+    //new-match
+    const newmatch1 ="http://localhost:8080/book-cricket/new-match"
+function newmatch(){
+    var xhReq = new XMLHttpRequest();
+            xhReq.open("GET", newmatch1, false);
+            xhReq.send(null);
+            var btn = document.getElementById("newmatch");
+            btn.onclick = function () {
+                window.location.replace("../Homepage/homepage.html");
+           }
+}
+</script>
 <script src="./teamonescore.js"></script>
 <script src="./teamtwoscore.js"></script>
 </html>
