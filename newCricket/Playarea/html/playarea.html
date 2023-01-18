@@ -10,25 +10,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>play</title>
-    <link rel="stylesheet" href="./play.css">
+    <link rel="stylesheet" href="../Css/playarea.css">
 </head>
 <body>
     <div class="bg">
-        <ul>
+        <ul id="ul">
             <li class="li2">
                 <h1>Book Cricket</h1>
+                
             </li>
             <li id="playerName" >Player name
             </li>
         </ul>
         <button id="prev"  class="Prevball"onclick="getResponseFromprevball()">Previous</button>
         <button  id="hit" class="hit" onclick="getResponseFromAPI()">HIT</button>
-    
+         <button class="playagain" id="play" onclick="newmatch()">New Match</button>
 
-        <div class="comdiv">
-            <img src="./commentry.png" style="height: 30%;width:30%;" class="imge">
+
+        <div class="comdiv" id="comdiv">
+            <img src="../images/commentry.png" style="height: 30%;width:30%;" class="imge">
             <h1 id="com"></h1>
         </div>
         <div class="table">
@@ -52,5 +54,5 @@
             </table>
         </div>
 </body>
-<script src="./playarea.js"></script>
+<script src="../js/playarea.js"></script>
 </html>

@@ -9,7 +9,7 @@ html {
   box-sizing: border-box;
 }
 .bg {
-  background-image: url("./BackgrountImage.jpg");
+  background-image: url("../images/BackgrountImage.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;

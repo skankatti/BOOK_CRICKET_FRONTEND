@@ -6,7 +6,7 @@ html {
 }
 
 .bg {
-  background-image: url("./BackgrountImage.jpg");
+  background-image: url("../images/BackgrountImage.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -38,10 +38,7 @@ li a {
   margin-top: 15px;
 }
 
-/* table{
-  font-family: Arial, serif;
-  border-collapse:collapse;
-} */
+
 
 .table {
   width: 10px;
@@ -58,20 +55,7 @@ li a {
   margin-top: 71px;
   margin-left: 980px;
 }
-/* .team1{
-    margin-top: 372px;
-    position: absolute;
-    margin-left: 115px;
-    color: white;
-    background-color: black;
-} */
-/* .team2{
-  margin-top: 372px;
-  position: absolute;
-  margin-left: 1002px;
-  color: white;
-  background-color: black;
-} */
+
 .new-match{
   text-align: center;
   cursor: pointer;
@@ -83,12 +67,33 @@ li a {
   box-shadow: 0 9px #999;
   height: 12%;
   width: 20%;
-  margin-top: 30%;
-  margin-left: 42%;
+  margin-top: 20%;
+  margin-left: 40%;
   text-size-adjust: 20%;
   font-size: xxx-large;
 }
 .new-match:active {
+  background-color: #107968;
+  box-shadow: 0 5px rgb(0, 0, 0);
+  transform: translateY(4px);
+}
+.playagain1{
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #46a4c6;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  height: 12%;
+  width: 20%;
+  margin-top: 3%;
+  margin-left: 40%;
+  text-size-adjust: 20%;
+  font-size: xxx-large;
+}
+.playagain1:active {
   background-color: #107968;
   box-shadow: 0 5px rgb(0, 0, 0);
   transform: translateY(4px);

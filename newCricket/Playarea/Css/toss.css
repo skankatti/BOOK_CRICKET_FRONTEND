@@ -1,7 +1,7 @@
 body {
 
      font-family: 'Ubuntu', sans-serif;
-     background-image: url("./BackgrountImage.jpg");
+     background-image: url("../images/BackgrountImage.jpg");
      height: 100%;
      background-position: center;
      background-repeat: no-repeat;
@@ -36,13 +36,13 @@ body {
      animation: flip 1.4s 1;
 }
 .head {
-     width: 20px;
-     height: 20px;
+     width: 10px;
+     height: 10px;
    }
 
    .tail {
-     width: 20px;
-     height: 20px;
+     width: 10px;
+     height: 10px;
    }
 @keyframes flip {
      0% {

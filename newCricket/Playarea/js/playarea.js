@@ -9,14 +9,10 @@ function getResponseFromprevball(){
     xhReq.send(null);
     var jsonObject = JSON.parse(xhReq.responseText);
     document.getElementById("score").innerHTML = jsonObject.totalScore;
-    // document.getElementById("score").style.color="red";
-    document.getElementById("score").style.color.remove();
-    // document.getElementById("over").innerHTML = jsonObject.oversCompleted;
+    document.getElementById("over").innerHTML = jsonObject.overs;
     document.getElementById("playerName").innerHTML = jsonObject.batsmanName;
-    // document.getElementById("playerName").style.color ="red"
-    // document.getElementById("wicket").innerHTML = jsonObject.wicketCount;
-    // document.getElementById("teamName").innerHTML = jsonObject.playingTeamName;
-    // document.getElementById("rr").innerHTML = jsonObject.currentRunRate;
+    document.getElementById("com").innerHTML = jsonObject.commentary;
+    document.getElementById("rr").innerHTML = jsonObject.runRate;
     console.log(jsonObject);
 }
 
@@ -40,7 +36,7 @@ function getResponseFromAPI() {
     && jsonObject.inningType==1)) {
        var prev = document.getElementById("prev");
        prev.remove();
-        var Target = jsonObject.totalScore + 1;
+        var Target = jsonObject.totalScore+1
         console.log(Target);
         let btn = document.createElement("button");
         btn.innerHTML = "Second Inning";
@@ -54,26 +50,33 @@ function getResponseFromAPI() {
         btn.style.boxShadow = "0 9px black";
         btn.style.backgroundColor = "cyan";
         btn.style.fontSizeAdjust = "20%;"
-        var btn2 = document.getElementById("hit");
-        btn2.remove();
-        // var h1 = document.createElement("h1");
-        // h1.innerText = "Target for second inning :" + " " + jsonObject.target;
-        // h1.style.marginLeft = "32%";
-        // h1.style.marginTop = "-30%";
-        // h1.style.position = "absolute";
-        // h1.style.color = "cadetblue";
-        // document.body.appendChild(h1);
-
+        var h1 = document.createElement("h1");
+        h1.innerText = "Target for second inning :" + " " + Target;
+        h1.style.marginLeft = "32%";
+        h1.style.marginTop = "-30%";
+        h1.style.position = "absolute";
+        h1.style.color = "cadetblue";
+        document.body.appendChild(h1);
+        var commentary2 = document.getElementById("comdiv");
+        commentary2.remove();
         btn.onclick = function () {
             var xhReq = new XMLHttpRequest();
             xhReq.open("GET", uri1, false);
             xhReq.send(null);
-            window.location.replace("secondInning.html");
+            window.location.replace("../../Playarea/html/secondInning.html");
         }
         document.body.appendChild(btn);
         
     }
-    //AUTOPLAY FUNCTION
-// var but = document.querySelector("[id='hit']");
-// setInterval(function () {but.click();},3000);
 } 
+
+const newmatch1 ="http://localhost:8080/book-cricket/new-match"
+function newmatch(){
+    var xhReq = new XMLHttpRequest();
+            xhReq.open("GET", newmatch1, false);
+            xhReq.send(null);
+            var btn = document.getElementById("play");
+            btn.onclick = function () {
+                window.location.replace("../../Homepage/html/homepage.html");
+           }
+}

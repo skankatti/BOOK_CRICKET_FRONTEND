@@ -5,7 +5,7 @@ html {
 }
 
 .bg {
-  background-image: url("./BackgrountImage.jpg");
+  background-image: url("../Team/images/BackgrountImage.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -112,53 +112,7 @@ a{
   transform: translateY(4px);
 }
 
-.button {
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background-color: rgb(198, 70, 70);
-  border: none;
-  border-radius: 15px;
-  box-shadow: rgb(153 153 153) 0px 9px;
-  height: -12%;
-  width: 16%;
-  margin-top: -6.5%;
-  margin-left: 12%;
-  text-size-adjust: 20%;
-  font-size:xxx-large;
-  position: absolute;
-}
 
-.button:active {
-  background-color: #145c98;
-  box-shadow: 0 5px rgb(0, 0, 0);
-  transform: translateY(4px);
-}
-
-.button1 {
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background-color: rgb(198, 70, 70);
-  border: none;
-  border-radius: 15px;
-  box-shadow: rgb(153 153 153) 0px 9px;
-  height: -12%;
-  width: 16%;
-  margin-top: -6.5%;
-  margin-left: 71%;
-  text-size-adjust: 20%;
-  font-size:xxx-large;
-  position: absolute;
-}
-
-.button1:active {
-  background-color: #145c98;
-  box-shadow: 0 5px rgb(0, 0, 0);
-  transform: translateY(4px);
-}
 .team1{
   position: absolute;
   margin-left: 62%;
@@ -172,4 +126,82 @@ a{
   height:75%;
   width: 32.5%;
   margin-top: 2%;
+}
+#teamone{
+  margin-top: -80px;
+  margin-left: 16%;
+  /* color: purple; */
+}
+#teamtwo{
+  margin-top: -70px;
+  margin-left: 75%;
+  /* color: purple; */
+}
+.playagain1 {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: absolute;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: -160px;
+  margin-left: 648px;
+}
+
+.playagain1::after,
+.playagain1::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.playagain1::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+
+.playagain1::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.playagain1:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.playagain1:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.playagain1:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
 }

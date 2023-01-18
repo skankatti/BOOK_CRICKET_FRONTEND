@@ -13,18 +13,19 @@ function tableCreate() {
   var cell2 = row.insertCell(1);
   var cell3 = row.insertCell(2);
 
-  cell1.innerHTML = "PLAYERRUNS";
-  cell2.innerHTML = "BALLPLAYED";
-  cell3.innerHTML = "PLAYERNAME";
+  cell1.innerHTML = " PLAYERNAME";
+  cell2.innerHTML = " PLAYERRUNS";
+  cell3.innerHTML = "BALLPLAYED";
 
   for (var i = 0; i < jsonObject.length; i++) {
     var tr = document.createElement("tr");
     tblBody.appendChild(tr);
-    for (var j = 2; j < Object.keys(jsonObject[i]).length - 2; j++) {
+    for (var j = 1; j < Object.keys(jsonObject[i]).length - 3; j++) {
       var td = document.createElement("td");
       td.innerHTML = jsonObject[i][Object.keys(jsonObject[i])[j]];
       tr.appendChild(td);
     }
+    console.log(jsonObject);
   }
   table.appendChild(tblBody);
   myTable.appendChild(table);
