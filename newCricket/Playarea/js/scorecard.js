@@ -12,16 +12,22 @@ function newmatch(){
 }
 // next-match
 const nextmatch1 ="http://localhost:8080/book-cricket/next-match"
+function Previous(){
+    var prev = document.getElementById("Previous");
+        prev.onclick = function () {
+            window.location.replace("../html/secondInning.html");
+        }
+}
 function nextmatch(){
     var xhReq = new XMLHttpRequest();
             xhReq.open("GET", nextmatch1, false);
             xhReq.send(null);
             var jsonObject = JSON.parse(xhReq.responseText);
              var btn = document.getElementById("play2");
-             var prev = document.getElementById("Previous");
+            
             if(jsonObject.tournamentResult!=null)
             {
-                prev.remove();
+               prev.remove();
                btn.remove(); 
                var btn2 = document.getElementById("newmatch");
                 btn2.style.marginTop="39%";
@@ -124,10 +130,4 @@ function nextmatch(){
             btn.onclick = function () {
                 window.location.replace("../../Playarea/html/toss.html");
             }       
-}
-function Previous(){
-   
-        prev.onclick = function () {
-            window.location.replace("../html/secondInning.html");
-        }
 }
